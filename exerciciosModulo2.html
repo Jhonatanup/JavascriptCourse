@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Modulo 2</title>
+    </head>
+    <body>
+        <div id="exercicio1">
+            <button id="btnEx1">Adicionar quadrado vermelho</button>
+        </div> 
+        <div id="ex4">
+            <input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
+        </div>
+        <script>
+            /*Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+            vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+            aparecer na tela*/
+            var btnEx1 = document.querySelector('button#btnEx1');
+            var count = 1;
+            btnEx1.onclick = function criaQuadrado(){
+                var boxElement = document.createElement('div');
+                boxElement.classList.add('box');
+                boxElement.id = "box-" + count;
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+
+                boxElement.addEventListener("mouseover", () => {
+                let newColor = getRandomColor();
+
+                console.log(boxElement.id + ": " + newColor);
+                boxElement.style.backgroundColor = newColor;
+                });
+
+                var container = document.querySelector('div#exercicio1');
+                container.appendChild(boxElement);
+            }
+            /*Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+            algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:*/
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            //A partir do seguinte vetor:
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            /*Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+            ● Diego
+            ● Gabriel
+            ● Lucas*/
+            var lista = document.createElement('ul');
+            nomes.forEach(function (string, i, array){
+                    var item = document.createElement('li')
+                    lista.appendChild(item);
+                    console.log(item);
+                    var texto = document.createTextNode(string);
+                    item.appendChild(texto);
+                    var container = document.querySelector('div#exercicio1');
+                    container.appendChild(lista);
+                    
+            });
+            //Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+            /*<input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
+            Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+            nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+            demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.*/
+            function adicionar(){
+                var container = document.querySelector('ul');
+                var newItem = document.querySelector('input[name=nome]');
+
+                var item = document.createElement('li')
+                container.appendChild(item);
+                var texto = document.createTextNode(newItem.value);
+                item.appendChild(texto);
+                newItem.value="";
+
+                //container.appendChild(lista);
+            }
+            
+            
+        </script>
+    </body>
+</html>
