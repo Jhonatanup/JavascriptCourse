@@ -4,15 +4,14 @@
     </head>
     <body>
         <script>
-            for(var i = 0; i <= 10; i++){
-                console.log("this is the iteration number %d", i);
-            }
-
-            while(i > 0){
-                console.log("the value of i is %d", i);
-                i--;
-            }
-
+          function helloWorld(){
+              console.log("Olá, Mundo!");
+          }
+          //executa a cada 1s
+          //setInterval(helloWorld, 1000);
+          //só executa após dois seg
+          setTimeout(helloWorld, 2000);
+          
         </script>
     </body>
 </html>
