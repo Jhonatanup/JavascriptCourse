@@ -4,36 +4,14 @@
     </head>
     <body>
         <script>
-            function retornaSexo(sexo){
-                if(sexo == 'M'){
-                    return 'Masculino';
-                }else if(sexo == 'F'){
-                    return 'Feminino'
-                }else{
-                    return 'Outro'
-                }
+            for(var i = 0; i <= 10; i++){
+                console.log("this is the iteration number %d", i);
             }
-            
-            var result = retornaSexo('M');
-            console.log(result);
 
-            function retornaSexoComSwitch(sexo){
-                switch (sexo){
-                case 'M':
-                    return 'Masculino';
-                case 'F':
-                    return 'Feminino';
-                default:
-                    return 'Outro';
-                }
+            while(i > 0){
+                console.log("the value of i is %d", i);
+                i--;
             }
-            
-            var result = retornaSexoComSwitch('F');
-            console.log(result);
-            
-            var a = 3, b = 5;
-            c = (a == b) ? true : false;
-            console.log(c);
 
         </script>
     </body>
