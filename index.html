@@ -4,11 +4,31 @@
     </head>
     <body>
         <script>
-            function soma(a, b){
-                var result = a + b;
-                return result;
+            function retornaSexo(sexo){
+                if(sexo == 'M'){
+                    return 'Masculino';
+                }else if(sexo == 'F'){
+                    return 'Feminino'
+                }else{
+                    return 'Outro'
+                }
             }
-            var result = soma(5,3);
+            
+            var result = retornaSexo('M');
+            console.log(result);
+
+            function retornaSexoComSwitch(sexo){
+                switch (sexo){
+                case 'M':
+                    return 'Masculino';
+                case 'F':
+                    return 'Feminino';
+                default:
+                    return 'Outro';
+                }
+            }
+            
+            var result = retornaSexoComSwitch('F');
             console.log(result);
         </script>
     </body>
