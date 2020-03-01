@@ -4,13 +4,79 @@
     </head>
     <body>
         <script>
-          function helloWorld(){
-              console.log("Olá, Mundo!");
-          }
-          //executa a cada 1s
-          //setInterval(helloWorld, 1000);
-          //só executa após dois seg
-          setTimeout(helloWorld, 2000);
+            //Crie uma função que dado o objeto a seguir:
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };  
+            //Retorne o seguinte conteúdo:
+            //O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com
+            //nº 1293.
+            function exercicio1(endereco){
+                console.log("O usuário mora em %s / %s, no bairo %s, na %s com nº %d.", endereco.cidade, endereco.uf, endereco.bairro, endereco.rua, endereco.numero);
+            }
+            //Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
+            function exercicio2(x, y) {
+                while(y >= x){
+                    if(y % 2 == 0){
+                        console.log("%d é par", y);
+                    }
+                    y--;
+                }
+            }
+            //Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript"
+            //e retorna um booleano true/false caso exista ou não
+            function exercicio3(skills){
+                return (skills.indexOf("Javascript") != -1) ? true : false;
+            }
+            //Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
+            // De 0-1 ano: Iniciante
+            // De 1-3 anos: Intermediário
+            // De 3-6 anos: Avançado
+            // De 7 acima: Jedi Master
+            function exercicio4(anos) {
+                if(anos <= 1){
+                    return "Iniciante";
+                }else if(anos <= 3){
+                    return "Intermediário";
+                }else if(anos <= 6){
+                    return "Avançado";
+                }else{
+                    return "Jedi Master";
+                }
+            }
+            //Dado o seguinte vetor de objetos:
+            var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+            ];
+            //Escreva uma função que produza o seguinte resultado:
+            //O Diego possui as habilidades: Javascript, ReactJS, Redux
+            //O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+            function exercicio5(usuarios){
+                for(let value of usuarios){
+                    var a = value.habilidades.join();
+                    console.log("O %s possui as habilidades: %s", value.nome, a);
+                }
+            }
+
+
+            exercicio1(endereco);
+            exercicio2(32, 321);
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            console.log(exercicio3(skills)); // true ou false
+            var anosEstudo = 7;
+            console.log(exercicio4(anosEstudo));
+            exercicio5(usuarios);
           
         </script>
     </body>
