@@ -4,15 +4,21 @@
     </head>
     <body>
         <div id="app">
-            <input type="text" name="nome">
-            <button>Press Me</button>
+            <input type="text" name="nome" placeholder=" what is the link?...">
+            <input type="text" name="nome2" placeholder=" link text...">
+            <button onclick="createLink()">Adicionar</button>
         </div> 
         <script>
-            btnElement = document.querySelector('button');
-            inputElement = document.querySelector('input[name=nome]')
-            btnElement.onclick = function showAlert(){
-                alert(inputElement.value);
+            var btn = document.querySelector('button')
+            btn.onclick = function createLink() {
+                var linkElement = document.createElement('a');
+                linkElement.setAttribute('href', document.querySelector('input').value);
+                var textElement = document.createTextNode(document.querySelector('input[name=nome2]').value);
+                linkElement.appendChild(textElement);
+                var containerElement = document.querySelector('div#app');
+                containerElement.appendChild(linkElement);
             }
+           
         </script>
     </body>
 </html>
