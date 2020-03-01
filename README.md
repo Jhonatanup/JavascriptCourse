@@ -14,3 +14,5 @@ Anotações realizadas durante a realização do curso de Javascript da Rocketse
 ### Modulo Manipulando a DOM
 * -eventos inline
 * -trabalhando com a DOM
+* -lidando com elementos
+* -alterando estilos
