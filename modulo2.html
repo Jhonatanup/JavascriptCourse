@@ -4,11 +4,14 @@
     </head>
     <body>
         <div id="app">
-            <button onclick="showAlert()">Press Me</button>
+            <input type="text" name="nome">
+            <button>Press Me</button>
         </div> 
         <script>
-            function showAlert(){
-                alert('You have pressed the button');
+            btnElement = document.querySelector('button');
+            inputElement = document.querySelector('input[name=nome]')
+            btnElement.onclick = function showAlert(){
+                alert(inputElement.value);
             }
         </script>
     </body>
