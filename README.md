@@ -16,3 +16,7 @@ Anotações realizadas durante a realização do curso de Javascript da Rocketse
 * -trabalhando com a DOM
 * -lidando com elementos
 * -alterando estilos
+### APP de To-dos
+* -estrutura do app
+* -iniciando a aplicação
+* -renderizando to-dos
