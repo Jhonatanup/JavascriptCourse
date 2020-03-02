@@ -23,3 +23,8 @@ Anotações realizadas durante a realização do curso de Javascript da Rocketse
 * -criando to-dos
 * -excluindo to-dos
 * -salvando no storage
+### JS Assíncrono
+* -requisições AJAX
+
+
+
