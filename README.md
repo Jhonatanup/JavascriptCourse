@@ -20,3 +20,4 @@ Anotações realizadas durante a realização do curso de Javascript da Rocketse
 * -estrutura do app
 * -iniciando a aplicação
 * -renderizando to-dos
+* -criando todos
